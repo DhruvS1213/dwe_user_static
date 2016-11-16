@@ -5,6 +5,7 @@ node_modules
 app/bower_components
 coverage
 plugins
+platforms
 *.swp
 *.swo
 *.log
