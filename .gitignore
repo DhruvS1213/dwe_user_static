@@ -1,0 +1,13 @@
+node_modules
+.idea
+.temp
+.sass-cache
+app/bower_components
+coverage
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+
+
