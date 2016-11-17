@@ -18,3 +18,6 @@ To generate an apk for the application follow the following steps:
    platforms > android > build > outputs > apk > android-debug.apk
    
    Install this apk in the device to perform device testing.
+   
+3. The preferred size of device for testing is 1280px x 800px. The CSS is designed according to Nexus7_2012 model.
+   Any device with similar dimensions would be a good choice for testing.
