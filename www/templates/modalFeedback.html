@@ -1,0 +1,42 @@
+<ion-modal-view>
+    <div class="modal image-modal transparent">
+      <div class="feedback-button-position">
+            <img src="./img/btn_close.png" height="20px" width="20px" ng-click="uv.closeModalFeedback()">
+        </div> 
+           <div class="modal-div">
+                    <div class="feedback-modal">
+                        <form name="feedbackForm" ng-submit="uv.submitFeedback()">
+                       
+                            <div class="form-div">
+                         
+                                <label class="label-text">
+                                    Enter Your Name
+                                </label>
+                            <div class="form-spacing">
+                                <input ng-model="uv.feedbackUserName" type="text" name="" required >
+                            </div>
+                            <label class="label-text">
+                                Email Address
+                            </label>
+
+                            <div class="form-spacing">
+                            <input ng-model="uv.feedbackUserEmail" type="email" required >
+                            </div>
+                            <label class="label-text">
+                                Comments
+                            </label>
+                            <div class="form-spacing">
+                            <textarea ng-model="uv.feedbackUserComments" class="comment-wrapper" rows="4" cols="50" required>
+                            </textarea>
+                            </div>
+                            </div>
+                            
+                            
+                            <input  type = "submit" value="Submit">                     
+                        </form>
+                    </div>
+            </div>
+
+       
+    </div>
+</ion-modal-view>

@@ -8,10 +8,10 @@ angular.module('dweUser', ['ionic', 'ui.router'])
 .run(function($ionicPlatform) {
 
   $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
-    }
+    // if(window.cordova && window.cordova.plugins.Keyboard) {
+    //   cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    //   cordova.plugins.Keyboard.disableScroll(true);
+    // }
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
@@ -27,7 +27,7 @@ angular.module('dweUser', ['ionic', 'ui.router'])
         });
 })
 
-.controller('dweUserCtrl', ['$scope','$sce','$http', '$templateCache','$ionicModal', '$ionicSlideBoxDelegate', '$timeout', function($scope, $sce, $http, $templateCache,$ionicModal,$ionicSlideBoxDelegate, $timeout){
+.controller('dweUserCtrl', ['$scope','$sce','$http', '$templateCache','$ionicModal', '$ionicSlideBoxDelegate', '$timeout', '$ionicPopup', function($scope, $sce, $http, $templateCache,$ionicModal,$ionicSlideBoxDelegate, $timeout, $ionicPopup){
     console.log('user-view controller');
     var vm = this;
     var temp = Math.floor((Math.random() * 100) + 1);
@@ -60,6 +60,14 @@ angular.module('dweUser', ['ionic', 'ui.router'])
     // Video Modal
     $ionicModal.fromTemplateUrl('templates/modalVideo.html', function($ionicModal) {
         $scope.modal2 = $ionicModal;
+    }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
+    //Feedback Modal
+    $ionicModal.fromTemplateUrl('templates/modalFeedback.html', function($ionicModal) {
+        $scope.modal3 = $ionicModal;
     }, {
         scope: $scope,
         animation: 'slide-in-up'
@@ -108,6 +116,26 @@ angular.module('dweUser', ['ionic', 'ui.router'])
             vm.stopVideoTimer();
         }
     };
+
+    $scope.openFeedbackModal = function() {
+        $scope.modal3.show();
+        vm.feedbackUserName = '';
+        vm.feedbackUserEmail = '';
+        vm.feedbackUserComments = '';
+    };
+
+     //function to hide the Feedback Modal
+    vm.closeModalFeedback = function() {
+        $scope.modal3.hide();
+    };
+
+    vm.submitFeedback = function() {
+        var alertPopup = $ionicPopup.alert({
+            title: 'Thank-you',
+            template: 'Feedback recorded successfully !!'
+        });
+        vm.closeModalFeedback();
+    };   
 
 
     $scope.openModalVideo = function(index) {

@@ -1,5 +1,5 @@
 /* Empty. Add your own CSS if you like */
-@font-face{font-family:ericsson_capital_ttregular;src:url(/fonts/ericssoncapitaltt-webfont.woff)}
+@font-face{font-family:ericsson_capital_ttregular;src:url(../fonts/ericssoncapitaltt-webfont.woff)}
 
 .eEricssonFont {
     font-family: ericsson_capital_ttregular,Arial,sans-serif;
@@ -123,6 +123,147 @@
     float:left;
 
 }
+
+.feedback-wrapper {
+    float: right;
+    position: fixed;
+    top: 90px;
+    left: 700px;
+    font-size: 18px;
+    color: #193066;
+}
+
+.feedback-modal{
+  width: 70%;
+  background-color: white;
+  height: 500px;
+  align-content: center;
+  left: 16%;
+  position: relative;
+  z-index: 50;
+  top: -30px;
+}
+
+.form-div{
+        position: relative;
+        left: 90px;
+        top: 40px;
+    }
+
+
+    input[type="text"]{
+
+        height: 45px;
+        border-style: solid;
+        border-width: 0.1px;
+        width: 450px;
+        border-color: grey;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .form-spacing{
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+
+    .label-text{
+    font-size: 16px;
+    }
+
+
+    input[type="email"]{
+
+        height: 45px;
+        border-style: solid;
+        border-width: 0.1px;
+        width: 450px;
+        border-color: grey;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .comment-wrapper{
+        height: 100px;
+        border-style: solid;
+        border-width: 0.1px;
+        width: 450px;
+        border-color: grey;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    input[type="text"]{
+
+        height: 45px;
+        border-style: solid;
+        border-width: 0.1px;
+        width: 450px;
+        border-color: grey;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .form-spacing{
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+
+    .label-text{
+    font-size: 16px;
+    }
+
+
+    input[type="email"]{
+
+        height: 45px;
+        border-style: solid;
+        border-width: 0.1px;
+        width: 450px;
+        border-color: grey;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .comment-wrapper{
+        height: 100px;
+        border-style: solid;
+        border-width: 0.1px;
+        width: 450px;
+        border-color: grey;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    /*.button-style{
+        color: white;
+        background-color: #002661;
+        font-size: 18px;
+        width: 450px;
+        height: 45px;
+        border: none;
+        border-radius: 4px;
+        left: 90px;
+        position: relative;
+        top: 35px;
+    }*/
+
+    input[type="submit"]{
+          color: white;
+        background-color: #002661;
+        font-size: 18px;
+        width: 450px;
+        height: 45px;
+        border: none;
+        border-radius: 4px;
+        left: 90px;
+        position: relative;
+        top: 35px;
+    }
+
+
 .img-description{
     padding:20px;
 
@@ -168,6 +309,13 @@ color: #f90;
     position: relative;
     top: 60px;
     z-index: 20 !important;
+}
+
+.feedback-button-position{
+    top: 50px;
+    position: relative;
+    left: 760px;
+    z-index: 240;
 }
 
 
